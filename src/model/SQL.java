@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +12,7 @@ public class SQL {
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/textile_db", "root", "1515151515Gmail@@@@");
+            connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/pharmacy_db", "pharmacy", "Pharmacy@123");
         } catch (Exception e) {
             e.printStackTrace();
         }
