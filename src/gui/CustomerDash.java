@@ -4,7 +4,11 @@
  */
 package gui;
 
+import Model.SQL;
 import com.formdev.flatlaf.intellijthemes.FlatCobalt2IJTheme;
+import java.sql.ResultSet;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,6 +21,24 @@ public class CustomerDash extends javax.swing.JFrame {
      */
     public CustomerDash() {
         initComponents();
+
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0);
+
+        try {
+            ResultSet rs = SQL.execute("SELECT * FROM `customer`");
+
+            while (rs.next()) {
+                Vector vector = new Vector();
+                vector.add(rs.getString("mobile"));
+                vector.add(rs.getString("fname"));
+                vector.add(rs.getString("lname"));
+
+                model.addRow(vector);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -158,7 +180,7 @@ public class CustomerDash extends javax.swing.JFrame {
 
     private void jLabel8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MousePressed
 //        this.dispose();
-         System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_jLabel8MousePressed
 
     private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered

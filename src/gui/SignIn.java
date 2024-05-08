@@ -74,7 +74,7 @@ public class SignIn extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("The New Pharmacy");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 180, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 210, -1));
 
         jLabel7.setText("Forgot Password?");
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
