@@ -5,7 +5,6 @@
 package gui;
 
 import com.formdev.flatlaf.intellijthemes.FlatCobalt2IJTheme;
-
 /**
  *
  * @author sande
